@@ -1,0 +1,64 @@
+---
+title: "DS202LabHW1"
+author: "Hanying Shen"
+date: "9/5/2019"
+output: html_document
+---
+Hanying Shen, GitHub username: hshen0422
+new file upload, commit ID:bc15493c0504e0e14b93a44f29e886358343ab95
+Yes, I am able to do so without error. 
+My partner and I had a difficult time when we were trying to use Git push to Git Hub. It always shows ! [rejected]        master -> master (non-fast-forward) error: failed to push some refs to 'https://github.com/jessiehwang/ds202_lab1.git' 
+
+2.1 Git is a tool to manage your source code history, and Git manages the evolution of a set of files – called a repository; and GitHub is a hosting service for projects that use Git.
+
+2.2 Yes, they can be used independently. We don't normally do so because they are designed to work together. GitHub is a platform that is built on top of Git to give teams another level of project organization, which includes issue tracking, code reviewing, and much more.
+
+2.3 A repository is the evolution of a set of files. It is like a folder for the project. 
+
+3.1
+```{r}
+X = c(47,34,33,65,37,NA,43,NA,11,NA,23,NA)
+sum(is.na(X)==TRUE)
+```
+3.2
+```{r}
+age = c(25,30,45,60,12,41)
+smoker = c('T','F','T','F','F','F')
+weight = c(120,137,0,168,91,142)
+example_data = data.frame(age,smoker,weight)
+example_data
+example_data[3,3] <-150
+example_data
+```
+3.3
+```{r}
+# vector with missing data
+x <- c(1:4, NA, 6,7, NA)
+x
+average<-function(x){
+  b<-x /sum(x, na.rm = TRUE)
+  print(paste("The mean for the variable in the list is",b))
+}
+
+avgmean<-function(x) {
+  a<-mean(is.na(x))
+  print(paste("The mean of 1(for TRUE) and 0(for FALSE) is ",a ))
+}
+average(x)
+avgmean(x)
+
+```
+
+3.4
+```{r}
+both_na <- function(x, y) {
+  stopifnot(length(x) == length(y))
+  which(is.na(x) & is.na(y))
+}
+
+y <- c(1:4, NA, 6,7, NA)
+both_na(x,y)
+  
+```
+abdc
+
