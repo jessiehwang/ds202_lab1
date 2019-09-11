@@ -62,3 +62,4 @@ y<-c(3,6,8,NA,2,NA)
 both_na(x,y)
 
 ```
+hahaha
