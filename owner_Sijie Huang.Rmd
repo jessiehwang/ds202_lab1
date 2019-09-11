@@ -1,0 +1,64 @@
+---
+title: "Ds 202_lab1"
+author: "Sijie Huang"
+date: "September 10, 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+# Collaborating on a Repository
+Name:Sijie HUang
+field of study: I am in statistics major.
+fun fact: I am a ferret lover and has two ferrets.
+
+# Understanding Concepts 
+Explain the difference between Git and Github.
+
+GIt is a tool to manage your source code history and github is a hosting service for Git repositories.
+
+Can Git and Github be used independently? Why dont we do so? Describe the advantages and disadvantages.
+Yes, they can work independently.But they are designd for each other.Git can manage otley collection of files for data aalytical projects but it only can work on a single computer.Github can provided a home for your git project in internet.
+
+What is a repository in Git and how can you create a repository in Git (write out the command(s))?
+Repository is a content for git to manage project and a set of files as they change overtime. 
+git init
+git add
+git commit
+
+# Coding Exercises 
+```{R}
+#1
+X = c(47,34,33,65,37,NA,43,NA,11,NA,23,NA)
+sum(is.na(X)==TRUE)
+#There are 4 NA in X
+#2
+age = c(25,30,45,60,12,41)
+smoker = c('T','F','T','F','F','F')
+weight = c(120,137,0,168,91,142)
+example_data = data.frame(age,smoker,weight)
+example_data[3,3]<-150
+example_data
+#3
+x<-c(1,5,7,2,NA,NA)
+average<-function(x){
+  b<-x /sum(x, na.rm = TRUE)
+  print(paste("The mean for the variable in the list is",b))
+}
+avme<-function(x){
+  a<-mean(is.na(x))
+  print(paste("The mean of 1(for TRUE) and 0(for FALSE) is ",a ))
+}
+average(x)
+avme(x)
+#4
+both_na <- function(x, y) {
+  stopifnot(length(x) == length(y))
+  which(is.na(x) & is.na(y))
+}
+
+y<-c(3,6,8,NA,2,NA)
+both_na(x,y)
+
+```
