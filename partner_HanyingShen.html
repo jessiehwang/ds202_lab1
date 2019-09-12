@@ -405,13 +405,13 @@ x &lt;- c(1:4, NA, 6,7, NA)
 x</code></pre>
 <pre><code>## [1]  1  2  3  4 NA  6  7 NA</code></pre>
 <pre class="r"><code>average&lt;-function(x){
-  b&lt;-x /sum(x, na.rm = TRUE)
-  print(paste(&quot;The mean for the variable in the list is&quot;,b))
+  a&lt;-x /sum(x, na.rm = TRUE)
+  print(paste(&quot;The mean for the variable in the list is&quot;,a))
 }
 
 avgmean&lt;-function(x) {
-  a&lt;-mean(is.na(x))
-  print(paste(&quot;The mean of 1(for TRUE) and 0(for FALSE) is &quot;,a ))
+  b&lt;-mean(is.na(x))
+  print(paste(&quot;The mean of 1(for TRUE) and 0(for FALSE) is &quot;,b))
 }
 average(x)</code></pre>
 <pre><code>## [1] &quot;The mean for the variable in the list is 0.0434782608695652&quot;

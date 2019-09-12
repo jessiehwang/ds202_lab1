@@ -36,13 +36,13 @@ example_data
 x <- c(1:4, NA, 6,7, NA)
 x
 average<-function(x){
-  b<-x /sum(x, na.rm = TRUE)
-  print(paste("The mean for the variable in the list is",b))
+  a<-x /sum(x, na.rm = TRUE)
+  print(paste("The mean for the variable in the list is",a))
 }
 
 avgmean<-function(x) {
-  a<-mean(is.na(x))
-  print(paste("The mean of 1(for TRUE) and 0(for FALSE) is ",a ))
+  b<-mean(is.na(x))
+  print(paste("The mean of 1(for TRUE) and 0(for FALSE) is ",b))
 }
 average(x)
 avgmean(x)
